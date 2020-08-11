@@ -11,7 +11,7 @@ whetherForm.addEventListener('submit', (event) => {
     console.log('search value  ', location);
     messageField.innerHTML = 'Loading Information';
     errorField.innerHTML = '';
-    fetch(`http://localhost:3000/whether?address=${location}`).then((response) => {
+    fetch(`/whether?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 errorField.innerHTML = data.error;
