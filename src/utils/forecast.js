@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Invalid co-ordinates..Please provide correct co-ordinates', undefined);
         } else {
-            callback(undefined, `The current Temperature is ${body.current.temperature} and chances of rain are ${body.current.precip}%`);
+            callback(undefined, `The current Temperature is ${body.current.temperature} and chances of rain are ${body.current.precip}% and wind speed is ${body.current.wind_speed}`);
         }
     });
 };
